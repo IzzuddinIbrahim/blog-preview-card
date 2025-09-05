@@ -1,0 +1,141 @@
+/*preview-card*/
+/*illustration*/
+/*tag*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Figtree, sans-serif;
+}
+
+body {
+    background-color: hsl(47, 88%, 63%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.preview-card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 384px;
+    text-align: left;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 1);
+    border: 1px solid black;
+}
+
+.preview-card:hover {
+    transform: translate(-2px, -2px);   /* Slightly lift effect*/
+    box-shadow: 12px 12px 0px rgba(0, 0, 0, 1);
+}
+
+.tag {
+    background-color: hsl(47, 88%, 63%);
+    display: inline-block; /* Allow padding on inline element */
+    font-weight: 800;
+    font-size: 14px;
+    padding: 4px 12px; /* Internal spacing*/
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.illustration {
+    width: 100%;    /* makes image responsive to container */
+    border-radius: 10px;    /* Rounded corners */
+    margin-bottom: 24px;    /* space below the image */
+    display: block;     /* Ensures proper spacing */
+}
+
+.date {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color 0.7 ease;
+}
+
+h1:hover {
+    color: hsl(47, 88%, 63%);
+}
+
+.description {
+    color: hsl(0, 0%, 42%);
+    line-height: 1.5;
+    margin-bottom: 24px;
+    font-size: 14px;
+
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+}
+
+.author-name {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+/* mobile responsive*/
+@media (max-width: 375px) {
+    .preview-card {
+        padding: 20px;
+        max-width: 327px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .tag, .date {
+        font-size: 12px;
+    }
+}
+
+/* Tablet responsive*/
+@media (min-width: 376px) and (max-width: 768px) {
+    .preview-card {
+        max-width: 400px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
+
+/* Desktop responsive*/
+@media (min-width: 769px) {
+    .preview-card {
+        max-width: 384px;
+    }
+}
+
+/* Extra small devices*/
+@media (max-width: 320px) {
+    .preview-card {
+        padding: 16px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    .description {
+        font-size: 13px;
+    }
+}
